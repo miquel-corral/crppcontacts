@@ -56,7 +56,6 @@ WSGI_APPLICATION = 'crppcontacts.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
 
 DATABASES = {
     'default': {
@@ -68,6 +67,10 @@ DATABASES = {
         'PORT': '5432',
     },
 }
+
+deploy_env = os.environ.get('DEPLOY_ENV','LOCAL')
+if 'HEROKU' == deploy_env:
+    DATABASES['default'] = dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

@@ -1,6 +1,9 @@
 venv
 staticfiles
 
+# ignore heroku .env file
+*.env
+
 # ignore .pyc files
 *.pyc
 
