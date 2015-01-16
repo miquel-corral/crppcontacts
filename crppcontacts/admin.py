@@ -3,8 +3,6 @@ from django.contrib import admin
 import crppcontacts.models
 
 
-# admin.site.register(contactsapp.models.Contact)
-
 
 class TagAdmin(admin.ModelAdmin):
     list_filter = ('name',)
@@ -14,11 +12,11 @@ admin.site.register(crppcontacts.models.Tag, TagAdmin)
 
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'organization', 'email1', 'telephone1', 'email1')
-    list_filter = ('name', 'organization', 'email1', 'country', 'tags')
+    list_display = ('name', 'organization', 'email1', 'telephone', 'mobile1')
+    list_filter = ('tags', 'organization', 'first_name', 'last_name')
     fieldsets = (
         (None, {
-            'fields': ('name', 'first_name', 'last_name', 'organization', 'department', 'position', 'telephone1',
+            'fields': ('name', 'first_name', 'last_name', 'organization', 'department', 'position', 'telephone',
                        'mobile1', 'mobile2', 'email1', 'email2', 'website')
         }),
         ('Address', {

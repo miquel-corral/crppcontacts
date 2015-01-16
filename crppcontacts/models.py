@@ -25,15 +25,15 @@ class Contact(Common):
     """
     Represents a contact
     """
+    #name = django.db.models.CharField(max_length=200, null=True, blank=True)
     first_name = django.db.models.CharField(max_length=50, null=True, blank=True)
-    last_name = django.db.models.CharField(max_length=200, null=True, blank=True)
-    treatement = django.db.models.CharField(max_length=10, null=True, blank=True)
+    last_name = django.db.models.CharField(max_length=100, null=True, blank=True)
     organization = django.db.models.CharField(max_length=200, null=True, blank=True)
     position = django.db.models.CharField(max_length=200, null=True, blank=True)
     department = django.db.models.CharField(max_length=200, null=True, blank=True)
     email1 = django.db.models.EmailField(max_length=250, null=True, unique=False, blank=True)
     email2 = django.db.models.EmailField(max_length=250, null=True, unique=False, blank=True)
-    telephone1 = django.db.models.CharField(max_length=50, null=True, blank=True)
+    telephone = django.db.models.CharField(max_length=50, null=True, blank=True)
     mobile1 = django.db.models.CharField(max_length=50, null=True, blank=True)
     mobile2 = django.db.models.CharField(max_length=50, null=True, blank=True)
     country = django.db.models.CharField(max_length=50, null=True, blank=True)

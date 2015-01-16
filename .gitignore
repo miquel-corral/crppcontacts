@@ -1,6 +1,9 @@
 venv
 staticfiles
 
+# ignore .dump files
+*.dump
+
 # ignore heroku .env file
 *.env
 
