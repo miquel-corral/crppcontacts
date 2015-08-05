@@ -17,7 +17,7 @@ class ContactAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': ('name', 'first_name', 'last_name', 'organization', 'department', 'position', 'telephone',
-                       'mobile1', 'mobile2', 'email1', 'email2', 'website')
+                       'mobile1', 'mobile2', 'email1', 'email2', 'website','tags')
         }),
         ('Address', {
             'classes': ('collapse',),
