@@ -24,3 +24,17 @@ db.sqlite3
 
 # ignore log files
 *.log*
+
+# exclude files directory
+/files
+
+# exclude .csv files
+*.csv*
+
+# exclude .dump files
+*.dump*
+
+# exclude .rtf files
+*.rtf*
+
+
